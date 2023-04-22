@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login/ Register: Level Cards</title>
+        <link rel="stylesheet" href="./togglebuttons/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap-icons.css">
+    </head>
+    <body>
+        <div class="logo"></div>
+        <div class="wrapper">            
+            <div class="form-container">
+                <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Sign Up</label>
+                    <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner">
+                    <form method="post" onsubmit="myLoginAction.collect_data(event, 'login')" class="login">
+                        <pre>
+                        </pre>
+                        <div class="field">
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="field">
+                            <input id="loginPassword" name="password" type="password" placeholder="Password" required>
+                            <i class="bi bi-eye-slash-fill togglePassword" id="toggleLoginPassword"></i>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Login">
+                        </div>
+                        <div class="footer-links">
+                            <div class="pass-link"><a href="#">Forgot password?</a></div>
+                            <div class="signup-link"><a href="">Not a <br>member yet?</a></div>
+                        </div>
+                    </form>
+                    <form method="post" onsubmit="mySignupAction.collect_data(event, 'signup')" class="signup">                        
+                        <div class="field">
+                            <input name="username" type="text" class="form-control p-3" placeholder="Username" >
+                        </div>
+                        <div><small class="js-error js-error-username text-danger"></small></div>
+
+                        <div class="field">
+                            <input name="email" type="text" class="form-control p-3" placeholder="Email" >
+                        </div>
+                        <div><small class="js-error js-error-email text-danger"></small></div>
+
+                        <div class="field"> 
+                            <input name="password" type="password" id="signupPassword" class="form-control p-3" placeholder="Password" >
+                            <i class="bi bi-eye-slash-fill togglePassword" id="toggleSignupPassword"></i>
+                        </div>
+                        <div><small class="js-error js-error-password text-danger"></small></div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Create">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script  src="./togglebuttons/script.js"></script>
+    </body>
+</html>
